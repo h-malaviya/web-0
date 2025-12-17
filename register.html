@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register_style.css">
-    <script src="appConfig.js"></script>
+    <link rel="stylesheet" href="css/register_style.css">
+    <script src="script/register_script.js"></script>
     <title>User Registration</title>
-    <script src="register_script.js"></script>
+    <script src="script/appConfig.js"></script>
 </head>
 <body>
     <header>
@@ -26,8 +26,7 @@
             <label id="conf_error" class="error"></label>
             <label for="dob" class="labels">Date of Birth <span >*</span></label>
             <input type="date" id="dob" class="inputs" oninput="onDobChange(this.value)"  />
-            <label id="dob_error" class="error"></label>
-            
+            <label id="dob_error" class="error"></label>           
             <span id="terms"><input type="checkbox" id="tandc" onclick="onTandcChange()" >I accept <font id="terms_cond">terms & conditions</font></span>
             <label id="errors"></label>
             <input type="submit" class="submit" value="Register" id="submitBtn" />
