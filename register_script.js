@@ -1,5 +1,9 @@
 
 document.addEventListener("DOMContentLoaded",()=>{
+    if(localStorage.getItem("email")){
+                window.location.href="/home.html"
+                return;
+    }
     const today = new Date().toISOString().split("T")[0];
     document.getElementById("dob").setAttribute("max",today)
     updateSubmitState()
@@ -29,11 +33,10 @@ function register(event){
     const email = document.getElementById("email").value+""
     const password = document.getElementById("password").value+""
     const dob = document.getElementById("dob").value
-    fetch(AppConfig.url.google_sheet, {
+    fetch(AppConfig.url.google_sheet_users, {
         method: "POST",
         body: JSON.stringify({
             email: email,
-            password: password,
             dob: dob
         }),
         
@@ -45,6 +48,8 @@ function register(event){
             document.getElementById("form1").reset();
             Object.keys(formState).forEach(k => formState[k] = false);
             updateSubmitState();
+            localStorage.setItem("email",email);
+            window.location.href = "/home.html";
         }
     })
     .catch(err => {
@@ -153,3 +158,5 @@ function onTandcChange(){
     formState.tandc = document.getElementById("tandc").checked  
     updateSubmitState()
 }
+
+
