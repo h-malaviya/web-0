@@ -33,6 +33,7 @@ function register(event){
     const email = document.getElementById("email").value+""
     const password = document.getElementById("password").value+""
     const dob = document.getElementById("dob").value
+    showLoader()
     fetch(AppConfig.url.google_sheet_users, {
         method: "POST",
         body: JSON.stringify({
@@ -44,7 +45,7 @@ function register(event){
     .then(res => res.json())
     .then(data => {
         if (data.success) {
-            alert("Registration Successful!");
+
             document.getElementById("form1").reset();
             Object.keys(formState).forEach(k => formState[k] = false);
             updateSubmitState();
@@ -54,7 +55,8 @@ function register(event){
     })
     .catch(err => {
         document.getElementById("errors").innerText = "Submission failed!";
-    });
+    })
+    .finally(()=>hideLoader());
 }
 
 function onEmailChange(val){
@@ -159,4 +161,15 @@ function onTandcChange(){
     updateSubmitState()
 }
 
+window.addEventListener("load", () => {
+        document.getElementById("loader").style.display = "none";
+});
+
+function showLoader() {
+    document.getElementById("loader").style.display = "flex";
+}
+
+function hideLoader() {
+    document.getElementById("loader").style.display = "none";
+}
 

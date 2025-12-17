@@ -327,9 +327,6 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* =========================
-   RESPONSIVE (MOBILE FIX)
-========================= */
 @media (max-width: 768px) {
 
     /* Remove blank space */
@@ -377,3 +374,61 @@ a:hover {
         max-width: 350px;
     }
 }
+
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #4B4FCB, #8E92DB, #696FC7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0.6;
+}
+
+
+
+.ai-ring {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #ffffff;
+    animation: spin 1.2s linear infinite;
+    margin: 0 auto 20px;
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-ring {
+        width: 70px;
+        height: 70px;
+        border-width: 5px;
+    }
+
+    
+}
+

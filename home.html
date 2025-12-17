@@ -27,7 +27,7 @@
             const name=document.getElementById("name").value+""
             const email = document.getElementById("email").value+""
             const requirement = document.getElementById("requirement").value+""
-
+            showLoader()
             fetch(AppConfig.url.google_sheet_leads, {
                 method: "POST",
                 body: JSON.stringify({
@@ -51,7 +51,8 @@
                 console.log(err);
                 
                 document.getElementById("errors").innerText = "Submission failed!";
-            });
+            })
+            .finally(()=>hideLoader());
 
         }
         function onEmailChange(val){
@@ -98,14 +99,29 @@
 
         }
         function onLogout(){
-            
+            showLoader()
             localStorage.removeItem("email");
+            
             window.location.href="/register.html"
+            hideLoader()
             window.location.reload()
+
         }
         function toggleMenu() {
             document.getElementById("nav-links").classList.toggle("active");
         }
+        window.addEventListener("load", () => {
+                document.getElementById("loader").style.display = "none";
+        });
+
+        function showLoader() {
+            document.getElementById("loader").style.display = "flex";
+        }
+
+        function hideLoader() {
+            document.getElementById("loader").style.display = "none";
+        }
+
     </script>
 </head>
 <body>
@@ -207,5 +223,11 @@
         </div>
         
     </section>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="ai-ring"></div>
+            
+        </div>
+    </div>
 </body>
 </html>
