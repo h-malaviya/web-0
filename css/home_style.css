@@ -25,19 +25,26 @@ body {
     display: flex;
     gap: 30px;
     align-items: center;
+    color: #f0ffff;
 }
-
-a {
+.navurl{
+    text-decoration: none;
+    color: #c7c7c7;
+}
+.navurl:hover{
+    color: whitesmoke;
+}
+.contact_url{
     text-decoration: none;
     color: rgb(57, 57, 57);
 }
-
-a:hover {
-    color: black;
+.contact_url:hover{
+    
+    color: rgb(19, 19, 19);
 }
 
 #menu-btn,#close-btn {
-    display: none;
+    
     font-size: 24px;
     background: none;
     border: none;
@@ -63,10 +70,13 @@ a:hover {
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     background-color: #696FC7;
-    color: rgb(57, 57, 57);
+    color: #c7c7c7;
     border: none;
 }
-
+#logout:hover{
+    cursor: pointer;
+    color: whitesmoke;
+}
 #contactus {
     display: flex;
     flex-direction: row;
@@ -221,12 +231,15 @@ a:hover {
     background-color: #3c40a5;
 }
 
-.secondary-btn {
+.secondary-btn{
+    text-decoration: none;
     background-color: transparent;
     border: 2px solid #4B4FCB;
     color: #2c2c2c;
 }
-
+.secondary-btn>a{
+    text-decoration: none;
+}
 .secondary-btn:hover {
     background-color: #4B4FCB;
     color: white;
