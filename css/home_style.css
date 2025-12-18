@@ -44,7 +44,7 @@ body {
 }
 
 #menu-btn,#close-btn {
-    
+    display: none;
     font-size: 24px;
     background: none;
     border: none;
