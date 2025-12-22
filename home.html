@@ -1,117 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="css/home_style.css">
-        <script src="script/appConfig.js"></script>
-        <script src="script/home_script.js"></script>
-    </head>
-    <body>
-    
-    <header id="header">
-        <nav id="navbar">
-            <button id="menu-btn" onclick="toggleMenu()">☰</button>
 
-            <div id="nav-links">
-                <button id="close-btn" onclick="toggleMenu()">✖</button>
-                <a class="navurl" href="#home">Home</a>
-                <a class="navurl" href="#aboutus">About Us</a>
-                <a class="navurl" href="#contactus">Contact Us</a>
-                <button id="logout" class="navurl" onclick="onLogout()">Logout</button>
-            </div>
-        </nav>
-    </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <section id="home" class="section">
-        <div class="container home-container">
-            
-            <div class="home-image">
-                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Illustration">
-            </div>
+    <title>Hero Animation</title>
+    <link rel="stylesheet" href="css/home_style.css" />
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
 
-            <div class="home-content">
-                <h1>AI Solutions for Smarter Decisions</h1>
-                <p>
-                    We design intelligent AI systems that automate workflows, analyze
-                    large datasets, and help businesses grow faster with confidence.
-                </p>
+<body>
 
-                <ul class="home-points">
-                    <li>✔ AI Chatbots & Assistants</li>
-                    <li>✔ Predictive Analytics</li>
-                    <li>✔ Process Automation</li>
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="home.html" class="navbar__brand">Malaviya Harshil</a>
+
+            <span class="shadow">
+                <button type="button" class="switch">
+                    <img class="switch__cloud --2" src="https://assets.codepen.io/58281/cloud-1.svg" />
+                    <img class="switch__cloud --1" src="https://assets.codepen.io/58281/cloud-2.svg" />
+                    <div class="switch__inner">
+                        <div class="switch-globe">
+                            <img class="switch-globe__moon" src="https://assets.codepen.io/58281/moon_1.png" />
+                            <div class="switch-globe__circle"></div>
+                        </div>
+                        <img class="switch__stars" src="https://assets.codepen.io/58281/stars.svg" />
+                    </div>
+                </button>
+            </span>
+            <nav class="navbar__nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">
+                            Home
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
+                    <li><a href="about.html" class="nav-link">
+                            About
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
+                    <li><a href="experience.html" class="nav-link">
+                            Experience
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
+                    <li><a href="contact.html" class="nav-link">
+                            Contact
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
                 </ul>
+            </nav>
+            <button class="navbar__mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-menu-pane" id="mobile-menu-pane"></div>
+    
+    <div class="hero">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <main class="hero-content">
+        <div class="hero-text">
+            <h2 class="hero-greeting">Hello, I'm</h2>
+            <h1 class="hero-name">Harshil</h1>
+            <p class="hero-subtitle">Machine Learning • Artificial Intellignece • Automation</p>
+        </div>
 
-                <div class="cta-buttons">
-                    <button class="primary-btn">Get Started</button>
-                    <button class="secondary-btn" ><a href="#contactus">Contact Us</a></button>
-                </div>
-            </div>
+        <div class="hero-image">
+            <img src="/static/profile2.png" alt="Harshil Photo" id="profile-back" />
 
         </div>
-    </section>
-
-
-    <section id="aboutus" class="section alt-section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>
-                We are a team of developers and AI engineers passionate about building
-                real-world artificial intelligence solutions. Our mission is to make
-                AI accessible, reliable, and scalable for startups and enterprises.
-            </p>
-
-            <div class="features">
-                <div class="feature-card">
-                    <h3>🤖 AI & ML</h3>
-                    <p>Custom machine learning models tailored to your business needs.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>⚡ Automation</h3>
-                    <p>Automate workflows, reduce manual effort, and improve efficiency.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>📊 Data Insights</h3>
-                    <p>Transform raw data into actionable insights with AI analytics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contactus">
-        <div id="contact_details">
-            <p><a class="contact_url" href="tel:+91972299975">Contact no: +91972299975</a></p>
-            <p><a class="contact_url" href="mailto:sales@bitontree.com">Email: sales@bitontree.com</a></p>
-            <p><a class="contact_url" href="https://www.google.com/maps/place/Bitontree+Solutions/@23.0453943,72.5160598,17z/data=!3m1!5s0x395e9b520d6c13ed:0x83592707fd0627da!4m14!1m7!3m6!1s0x395e8549070afc3b:0x3951cccbc09da9e5!2sBitontree+Solutions!8m2!3d23.0453943!4d72.5160598!16s%2Fg%2F11h_kfysvh!3m5!1s0x395e8549070afc3b:0x3951cccbc09da9e5!8m2!3d23.0453943!4d72.5160598!16s%2Fg%2F11h_kfysvh?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D">Location: 305, Zodiac Square, Ahmedabad, India, 380054</a></p>
-            
-        </div>
-        <div >
-            <form id="contact_form" onsubmit="onSubmitLeadDetails(event)">
-                <label for="name" class="labels">Name <span >*</span></label>
-                <input type="text" id="name" class="inputs" oninput="onNameChange(this.value)" />
-                <label id="name_error" class="error"></label>
-                <label for="email" class="labels">Email <span >*</span></label>   
-                <input type="text" id="email" class="inputs" oninput="onEmailChange(this.value)" />
-                <label id="email_error" class="error" ></label>
-                <label for="requirement" class="labels">Requirements</label>   
-                <textarea id="requirement" class="inputs"   oninput="onRequirementChange(this.value)" ></textarea>
-                <label id="requirement_error" class="error" ></label>
-                <label id="errors" class="error"></label>
-                <input type="submit"  value="Send Request" id="submit">
-            </form>
-            
-        </div>
-        
-    </section>
-    <div id="loader">
-        <div class="loader-content">
-            <div class="ai-ring"></div>
-            
-        </div>
+    </main>
     </div>
+    <script src="/script/home_script.js"></script>
+    <script src="js/global.js"></script>
 </body>
+
 </html>

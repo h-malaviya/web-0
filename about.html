@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshil Malaviya - About & Skills</title>
+    <link rel="stylesheet" href="css/about_style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="navbar__container">
+                <a href="home.html" class="navbar__brand">Malaviya Harshil</a>
+
+                <span class="shadow">
+                    <button type="button" class="switch">
+                        <img class="switch__cloud --2" src="https://assets.codepen.io/58281/cloud-1.svg" />
+                        <img class="switch__cloud --1" src="https://assets.codepen.io/58281/cloud-2.svg" />
+                        <div class="switch__inner">
+                            <div class="switch-globe">
+                                <img class="switch-globe__moon" src="https://assets.codepen.io/58281/moon_1.png" />
+                                <div class="switch-globe__circle"></div>
+                            </div>
+                            <img class="switch__stars" src="https://assets.codepen.io/58281/stars.svg" />
+                        </div>
+                    </button>
+                </span>
+                <nav class="navbar__nav" id="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="home.html" class="nav-link">
+                                Home
+                                <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                    <rect width="100%" height="100%" rx="8" />
+                                </svg>
+                            </a></li>
+                        <li><a href="about.html" class="nav-link">
+                                About
+                                <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                    <rect width="100%" height="100%" rx="8" />
+                                </svg>
+                            </a></li>
+                        <li><a href="experience.html" class="nav-link">
+                                Experience
+                                <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                    <rect width="100%" height="100%" rx="8" />
+                                </svg>
+                            </a></li>
+                        <li><a href="contact.html" class="nav-link">
+                                Contact
+                                <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                    <rect width="100%" height="100%" rx="8" />
+                                </svg>
+                            </a></li>
+
+                    </ul>
+                </nav>
+                <button class="navbar__mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="mobile-menu-pane" id="mobile-menu-pane"></div>
+        <section class="education-section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-header">
+                        <div><img class="edu-icon"
+                                src="https://edurank.org/assets/img/uni-logos/dharmsinh-desai-university-logo.png"
+                                alt="DDU logo"></div>
+                        <div class="edu-info">
+                            <h3>Dharmsinh Desai University</h3>
+                            <p class="edu-degree">B.Tech - Information Technology</p>
+                        </div>
+                    </div>
+                    <div class="edu-details">
+                        <div class="edu-detail-item">
+                            <span class="label">GPA</span>
+                            <span class="value">7.6/10.00</span>
+                        </div>
+                        <div class="edu-detail-item">
+                            <span class="label">Period</span>
+                            <span class="value">Sept 2022 - Present</span>
+                        </div>
+                        <div class="edu-detail-item">
+                            <span class="label">Location</span>
+                            <span class="value">Nadiad, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-header">
+                        <div><img class="edu-icon" src="https://svmgondal.baps.edu.in/static/assets/img/schoolLogo.png"
+                                alt="School logo"></div>
+                        <div class="edu-info">
+                            <h3>BAPS Swaminarayan Vidyamandir</h3>
+                            <p class="edu-degree">Higher Secondary Certificate</p>
+                        </div>
+                    </div>
+                    <div class="edu-details">
+                        <div class="edu-detail-item">
+                            <span class="label">Percentile</span>
+                            <span class="value">92.92/100</span>
+                        </div>
+                        <div class="edu-detail-item">
+                            <span class="label">Period</span>
+                            <span class="value">May 2020 - Apr 2022</span>
+                        </div>
+                        <div class="edu-detail-item">
+                            <span class="label">Location</span>
+                            <span class="value">Gondal, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="skills-section">
+            <h2 class="section-title">Skills Universe</h2>
+            <p class="skills-subtitle">Click on any technology to see mastery level</p>
+
+            <div class="globe-container">
+                <!-- Changed from canvas to div to allow Three.js to append its own canvas -->
+                <div id="skillsGlobe"></div>
+                <div class="globe-instructions">
+                    <p>🖱️ Drag to rotate • Click logos to view mastery</p>
+                </div>
+            </div>
+
+            <!-- Skill Detail Modal -->
+            <div id="skillModal" class="skill-modal hidden">
+                <div class="modal-content">
+                    <button class="modal-close" id="modalClose">&times;</button>
+                    <div class="modal-icon" id="modalIcon"></div>
+                    <h3 id="modalSkillName"></h3>
+                    <div class="mastery-container">
+                        <div class="mastery-bar">
+                            <div class="mastery-fill" id="masteryFill"></div>
+                        </div>
+                        <span class="mastery-percentage" id="masteryPercentage"></span>
+                    </div>
+                    <p class="skill-category" id="skillCategory"></p>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="skills-list-section">
+            <h2 class="section-title">Technical Proficiencies</h2>
+            <div class="skills-categories" id="skillsCategories">
+                <!-- <div class="skill-category-card">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3>Data Science & ML</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3>AI Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">n8n</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3>Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Tailwind</span>
+                        <span class="skill-tag">Spring Boot</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3>DevOps & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">FastAPI</span>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        
+        <section class="projects-section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <h3 class="project-name">RenderMuse</h3>
+                            <span class="project-date">Jan 2025 - Mar 2025</span>
+                        </div>
+                        <p class="project-subtitle">AI-Powered Text-to-Image Generator</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            AaaS platform for AI-powered image generation with credit-based payment system and
+                            responsive full-stack architecture.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Razorpay</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/malaviyaharshil/RenderMuse" target="_blank" class="github-link">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <h3 class="project-name">TubeTalker</h3>
+                            <span class="project-date">May 2025</span>
+                        </div>
+                        <p class="project-subtitle">AI Chatbot for YouTube Videos</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            AI-powered chatbot that generates summaries and answers questions from YouTube videos using
+                            Gemini-1.5-flash and FAISS similarity search.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">LangChain</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Gemini</span>
+                            <span class="tech-badge">FAISS</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/malaviyaharshil/langchain-notes/tree/main/Langchain/TubeTalker"
+                            target="_blank" class="github-link">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script/about_script.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="css/experience_style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="home.html" class="navbar__brand">Malaviya Harshil</a>
+
+            <span class="shadow">
+                <button type="button" class="switch">
+                    <img class="switch__cloud --2" src="https://assets.codepen.io/58281/cloud-1.svg" />
+                    <img class="switch__cloud --1" src="https://assets.codepen.io/58281/cloud-2.svg" />
+                    <div class="switch__inner">
+                        <div class="switch-globe">
+                            <img class="switch-globe__moon" src="https://assets.codepen.io/58281/moon_1.png" />
+                            <div class="switch-globe__circle"></div>
+                        </div>
+                        <img class="switch__stars" src="https://assets.codepen.io/58281/stars.svg" />
+                    </div>
+                </button>
+            </span>
+            <nav class="navbar__nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">
+                            Home
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
+                    <li><a href="about.html" class="nav-link">
+                            About
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
+                    <li><a href="experience.html" class="nav-link">
+                            Experience
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
+                    <li><a href="contact.html" class="nav-link">
+                            Contact
+                            <svg class="animated-border-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" rx="8" />
+                            </svg>
+                        </a></li>
+
+                </ul>
+            </nav>
+            <button class="navbar__mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="experience-container">
+        <div class="mobile-menu-pane" id="mobile-menu-pane"></div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="company-logo">
+                            <span class="logo-text"><img style="height: 60px; width: 60px;"
+                                    src="/static/bitontree_logo.jpg" alt="Bitontree logo"></span>
+                        </div>
+                        <div class="card-title-section">
+                            <h2 class="job-title">AI/ML Engineer Intern</h2>
+                            <a href="https://www.bitontree.com/" target="_blank" style="text-decoration: none;">
+                                <h3 class="company-name">Bitontree Solutions</h3>
+                            </a>
+                            <p class="date-range">Dec 2025 – Present</p>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <ul class="responsibilities">
+                            <li>Building AI-driven backend services using <span class="highlight">FastAPI</span>,
+                                MongoDB, and PostgreSQL</li>
+                            <li>Designing scalable LLM workflows with <span class="highlight">LangChain</span> and <span
+                                    class="highlight">LangGraph</span></li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="company-logo">
+                            <span class="logo-text"><img style="height: 60px; width: 60px;"
+                                    src="https://media.licdn.com/dms/image/v2/D4D0BAQGUoU_rTjVcsw/company-logo_200_200/B4DZUxEpEoHkAI-/0/1740285055720/gen8i_logo?e=2147483647&v=beta&t=dIfEdk_HtE12lkOWzK1Ze7z_koni91evxCHa_NMiLA0"
+                                    alt="Bitontree logo"></span>
+                        </div>
+                        <div class="card-title-section">
+                            <h2 class="job-title">Data Scientist Intern</h2>
+                            <a href="https://www.gen8i.com/" target="_blank" style="text-decoration: none;">
+                                <h3 class="company-name">GEN8 (Generative AI Accelerator)</h3>
+                            </a>
+                            <p class="date-range">July 2025 – Sept 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <ul class="responsibilities">
+                            <li>Implemented <span class="highlight">Hybrid RAG pipeline</span> using LlamaIndex and MCP
+                                for improved LLM accuracy</li>
+                            <li>Deployed semantic search with <span class="highlight">PGVector</span> and HuggingFace
+                                embeddings</li>
+                            <li>Enhanced retrieval through chunked processing and dynamic query reranking</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">LlamaIndex</span>
+                            <span class="tech-tag">PGVector</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">HuggingFace</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/script/experience_script.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>
