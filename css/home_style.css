@@ -8,7 +8,7 @@
   --color-muted: #cfcfcf;
 
   --color-primary: #00aaff;
-  --font-family-sans-serif: "Inter", -apple-system, sans-serif;
+  --font-family-sans-serif: "Yu Gothic", -apple-system, sans-serif;
   --navbar-height: 80px;
   --border-radius: 8px;
   --transition-speed: 0.4s;
@@ -124,10 +124,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.0rem;
+  font-family: cursive;
 }
 
 .hero-greeting {
-  font-family: "Playfair Display", serif;
+  
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 500;
   color: var(--color-heading);
@@ -136,7 +137,7 @@ body {
 }
 
 .hero-name {
-  font-family: "Playfair Display", serif;
+ 
   font-size: clamp(3.8rem, 7vw, 6.2rem);
   font-weight: 700;
   color: var(--color-heading);
